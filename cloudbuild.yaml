@@ -1,0 +1,64 @@
+steps:
+  # Install dependencies
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+    id: 'install-dependencies'
+
+  # Run linter
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'lint']
+    id: 'lint'
+    waitFor: ['install-dependencies']
+
+  # Build Next.js app
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+    id: 'build'
+    waitFor: ['lint']
+
+  # Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/anchor-travel-consult:$COMMIT_SHA'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/anchor-travel-consult:latest'
+      - '.'
+    id: 'build-image'
+    waitFor: ['build']
+
+  # Push to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/anchor-travel-consult:$COMMIT_SHA']
+    id: 'push-image'
+    waitFor: ['build-image']
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    args:
+      - 'run'
+      - '--filename=k8s/'
+      - '--image=gcr.io/$PROJECT_ID/anchor-travel-consult:$COMMIT_SHA'
+      - '--location=us-central1'
+      - '--cluster=production'
+    id: 'deploy'
+    waitFor: ['push-image']
+
+# Build configuration
+images:
+  - 'gcr.io/$PROJECT_ID/anchor-travel-consult:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/anchor-travel-consult:latest'
+
+# Build timeout (30 minutes)
+timeout: '1800s'
+
+# Substitutions for environment variables
+substitutions:
+  _REGION: 'us-central1'
+
+# Options
+options:
+  machineType: 'N1_HIGHCPU_8'
+  logging: CLOUD_LOGGING_ONLY
+  substitutionOption: 'ALLOW_LOOSE'

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fraunces:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Zero-Default Rule: Override all native browser defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-900;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+/* Custom scrollbars for Firefox */
+* {
+  scrollbar-color: #1e3a5f #f5f5f5;
+  scrollbar-width: thin;
+}
+
+/* Remove outline on all elements, use custom focus ring instead */
+button, a, input, textarea, select {
+  @apply outline-none;
+}
+
+/* Custom focus visible state */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @apply ring-2 ring-orange-500 ring-offset-2;
+}
+
+/* Override form plugin double borders */
+input,
+textarea,
+select {
+  box-shadow: none !important;
+  border: 1px solid #d1d5db;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #f97316;
+  box-shadow: none !important;
+}
+
+/* Override autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Smooth page transitions */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  animation: pageEnter 0.3s ease-out;
+}
+
+/* Selection highlight with brand color */
+::selection {
+  @apply bg-orange-500 text-white;
+}
+
+::-moz-selection {
+  @apply bg-orange-500 text-white;
+}

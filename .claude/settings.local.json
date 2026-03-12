@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm install @radix-ui/react-avatar @radix-ui/react-accordion --legacy-peer-deps)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | head -100)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | grep -E \"\\(✓|error|Error|⨯\\)\" | head -20)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | grep -E \"\\(✓|Compiled|error|Error\\)\" | head -5)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | grep -E \"\\(✓|Compiled|error\\)\" | head -3)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | grep -E \"\\(✓|Compiled\\)\" | head -2)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | tail -50)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | grep -E \"\\(✓|Compiled|Generated\\)\" | head -3)",
+      "Bash(cd \"G:\\\\wORKS 2\\\\ACTIVE\\\\Apps\\\\anchor travel consult\" && npm run build 2>&1 | tail -20)"
+    ]
+  }
+}
