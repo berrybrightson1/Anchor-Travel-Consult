@@ -1,9 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Toaster } from "sonner";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import WhatsAppFAB from "@/components/whatsapp-fab";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Anchor Travel Consult | UK Education Specialists",
@@ -15,7 +20,6 @@ export const metadata: Metadata = {
     "study abroad",
     "UK universities",
   ],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "Anchor Travel Consult | UK Education Specialists",
