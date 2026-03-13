@@ -155,7 +155,7 @@ export default function OpportunitiesPage() {
             UK Education Opportunities
           </h1>
           <p className="text-lg text-gray-600">
-            Explore thousands of programs across the UK's leading universities.
+            Explore thousands of programs across the UK&apos;s leading universities.
           </p>
         </motion.div>
 

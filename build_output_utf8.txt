@@ -1,0 +1,63 @@
+﻿
+> anchor-travel-consult@1.0.0 build
+> next build
+
+   Γû▓ Next.js 15.5.12
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully in 3.1s
+   Skipping validation of types
+   Linting ...
+node.exe : 
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:Str 
+   ing) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Failed to compile.
+
+./app/about/page.tsx
+103:137  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+226:19  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+226:323  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+232:54  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+232:125  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+
+./app/opportunities/page.tsx
+158:56  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+
+./app/page.tsx
+198:60  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+198:93  Error: `'` can be escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, `&rsquo;`.  
+react/no-unescaped-entities
+
+./components/country-search.tsx
+283:39  Error: `"` can be escaped with `&quot;`, 
+`&ldquo;`, `&#34;`, `&rdquo;`.  
+react/no-unescaped-entities
+283:47  Error: `"` can be escaped with `&quot;`, 
+`&ldquo;`, `&#34;`, `&rdquo;`.  
+react/no-unescaped-entities
+
+info  - Need to disable some ESLint rules? Learn 
+more here: https://nextjs.org/docs/app/api-referen
+ce/config/eslint#disabling-rules

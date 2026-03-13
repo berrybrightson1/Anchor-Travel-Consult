@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { GraduationCap, Globe, BookOpen, Zap, Plus, Minus, Sparkles } from "lucide-react";
+import { GraduationCap, Globe, BookOpen, Zap, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ImageSlider from "@/components/image-slider";
 import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
@@ -195,7 +195,7 @@ export default function Home() {
                   variants={itemVariants}
                   className="text-lg sm:text-xl text-gray-100 mb-8 max-w-2xl mx-auto"
                 >
-                  Expert guidance for undergraduate, master's, and PhD programs at the world's most prestigious institutions.
+                  Expert guidance for undergraduate, master&apos;s, and PhD programs at the world&apos;s most prestigious institutions.
                 </motion.p>
 
                 {/* CTA Buttons */}

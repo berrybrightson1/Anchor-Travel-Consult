@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
 
 const COUNTRIES = [
   "Afghanistan",
@@ -280,7 +279,7 @@ export default function CountrySearch({ value, onChange }: CountrySearchProps) {
       {/* No results message */}
       {isOpen && value.length > 0 && filtered.length === 0 && (
         <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-gray-200 bg-white shadow-lg p-3 text-sm text-gray-500">
-          No countries found matching "{value}"
+          No countries found matching &quot;{value}&quot;
         </div>
       )}
     </div>

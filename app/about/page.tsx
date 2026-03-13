@@ -100,7 +100,7 @@ export default function AboutPage() {
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              To <span className="font-semibold text-navy-600">empower students globally</span> by providing expert guidance into the UK's finest universities, unlocking opportunities for academic excellence, personal growth, and transformative careers.
+              To <span className="font-semibold text-navy-600">empower students globally</span> by providing expert guidance into the UK&apos;s finest universities, unlocking opportunities for academic excellence, personal growth, and transformative careers.
             </p>
           </motion.div>
         </motion.div>
@@ -223,13 +223,13 @@ export default function AboutPage() {
             variants={itemVariants}
             className="text-lg text-gray-600 mb-6 leading-relaxed"
           >
-            We don't just process applications—we <span className="font-semibold">build relationships</span>. Our consultants combine deep knowledge of UK universities with genuine passion for student success. Every interaction is personal, every recommendation is backed by research, and every student leaves knowing they've found their perfect fit.
+            We don&apos;t just process applications—we <span className="font-semibold">build relationships</span>. Our consultants combine deep knowledge of UK universities with genuine passion for student success. Every interaction is personal, every recommendation is backed by research, and every student leaves knowing they&apos;ve found their perfect fit.
           </motion.p>
           <motion.p
             variants={itemVariants}
             className="text-lg text-gray-600 leading-relaxed"
           >
-            From first consultation to graduation, we're your trusted partner in achieving your academic dreams at the world's greatest universities.
+            From first consultation to graduation, we&apos;re your trusted partner in achieving your academic dreams at the world&apos;s greatest universities.
           </motion.p>
         </motion.div>
       </section>
